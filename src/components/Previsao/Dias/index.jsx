@@ -9,11 +9,9 @@ function Dia({ ativo = false, dados, semana }) {
 
     const estilo = ativo ? { backgroundColor: "#f8f8f8", color: "#21212D" } : {};
 
-    const { horario, temperatura, icone } = dados;
+    const { dia ,horario, temperatura, icone } = dados;
 
-    const diaHoje = new Date().toDateString();
-
-    const data = new Date(diaHoje).getUTCDay();
+    const data = new Date(dia).getUTCDay();
 
     let iconeComponente;
     switch (icone) {

@@ -29,11 +29,13 @@ function Previsao() {
                 .then(resp => resp[0])
                 .then((resp) => [resp.lat, resp.lon])
 
+            const dataHoje = new Date().toLocaleDateString();
             const atualClima = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${localizacao[0]}&lon=${localizacao[1]}&appid=${apiWeatherKey}&units=metric&lang=pt_br`)
                 .then(resp => resp.json())
                 .then((resp) => {
                     if ("rain" in resp) {
                         resp = {
+                            dia: dataHoje,
                             cidade: resp.name,
                             pais: resp.sys.country,
                             ceu: resp.weather[0].description,
@@ -45,6 +47,7 @@ function Previsao() {
                         }
                     } else {
                         resp = {
+                            dia: dataHoje,
                             cidade: resp.name,
                             pais: resp.sys.country,
                             ceu: resp.weather[0].description,
