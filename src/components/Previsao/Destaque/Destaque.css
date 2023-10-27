@@ -1,0 +1,53 @@
+.tela {
+    background: #000 url(../../../assets/images/sol-nascendo.gif) no-repeat center;
+    background-size: cover;
+    border-radius: 30px;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tela p {
+    font-weight: 600;
+}
+
+.emCima {
+    margin: 52px 218px 0px 52px;
+    color: #21212D;
+}
+
+.emCima>h2 {
+    font-size: 32px;
+}
+
+.emBaixo {
+    margin: 0px 0px 64px 64px;
+    color: #f8f8f8;
+}
+
+.emBaixo>h1 {
+    font-size: 100px;
+}
+
+.emBaixo>p::first-letter {
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 1050px) {
+    .tela {
+        width: 100%;
+    }
+
+    .emCima>h2 {
+        margin-bottom: 64px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .emCima>h2 {
+        font-size: 32px;
+        width: 200px;
+    }
+}

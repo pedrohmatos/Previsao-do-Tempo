@@ -1,0 +1,39 @@
+.dia {
+    color: #f8f8f8;
+    background-color: #282836;
+    min-width: 120px;
+    height: 210px;
+    border-radius: 12px;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.dia p {
+    font-weight: 700;
+    text-align: center;
+    line-height: 32px;
+}
+
+.dia > span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dia > span > svg {
+    font-size: 70px;
+}
+
+@media screen and (max-width: 560px) {
+    .dia {
+        height: 150px;
+    }
+
+    .dia > span > svg {
+        font-size: 50px;
+    }
+}

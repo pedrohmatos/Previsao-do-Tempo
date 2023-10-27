@@ -1,0 +1,63 @@
+.previsaoClima {
+    width: 989px;
+    background-color: #21212D;
+    border-radius: 30px;
+    display: flex;
+    box-shadow: 5px 5px 16px rgba(0, 0, 0, 0.336);
+}
+
+.informacoes {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    padding: 52px;
+}
+
+.ar {
+    color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 16px;
+}
+
+.semana {
+    display: flex;
+    column-gap: 10px;
+    width: 422px;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+}
+.semana::-webkit-scrollbar {
+    background-color: #282836;
+    height: 12px;
+}
+.semana::-webkit-scrollbar-thumb {
+    background-color: #f8f8f8;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 1050px) {
+    .previsaoClima {
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .previsaoClima {
+        width: 360px;
+    }
+
+    .semana {
+        width: 300px;
+    }
+
+    .emCima>h2 {
+        font-size: 32px;
+        width: 200px;
+    }
+}

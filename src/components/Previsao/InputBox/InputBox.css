@@ -1,0 +1,28 @@
+.buscar > input{
+    border: none;
+    border-radius: 25px;
+    background: #DA6E37;
+    color: #282836;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 7px 32px;
+    outline: none;
+}
+
+.buscar > input::placeholder {
+    color: #282836;
+}
+
+.buscar > p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #f8f8f8;
+    text-align: center;
+    margin-top: 5px;
+}
+
+@media screen and (max-width: 560px) {
+    .buscar > input {
+        padding: 7px;
+    }
+}

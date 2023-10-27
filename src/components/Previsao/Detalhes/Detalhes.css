@@ -1,0 +1,19 @@
+.detalhes {
+    width: 337px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.detalhes>p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 560px) {
+    .detalhes {
+        width: 230px;
+    }
+    .detalhes>p {
+        font-size: 16px;
+    }
+}
