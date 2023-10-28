@@ -1,4 +1,4 @@
-import "./InputBox.css";
+import styles from "./InputBox.module.css";
 
 function InputBox({ enviar, valor, digitar }) {
 
@@ -9,7 +9,7 @@ function InputBox({ enviar, valor, digitar }) {
     };
 
     return (
-        <div className="buscar">
+        <div className={styles.buscar}>
             <input
                 value={valor}
                 onChange={digitar}

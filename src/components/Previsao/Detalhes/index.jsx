@@ -1,4 +1,4 @@
-import "./Detalhes.css";
+import styles from "./Detalhes.module.css";
 
 function Detalhes({ nome, dado = 0 }) {
 
@@ -13,7 +13,7 @@ function Detalhes({ nome, dado = 0 }) {
     }
 
     return (
-        <div className="detalhes">
+        <div className={styles.detalhes}>
             <p>{nome}</p>
             <span>
                 {dado} {unidadeDeMedida}

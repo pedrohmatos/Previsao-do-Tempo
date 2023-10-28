@@ -1,4 +1,4 @@
-import "./Destaque.css";
+import styles from "./Destaque.module.css";
 import { MdPlace } from "react-icons/md";
 
 function Destaque({ dados, semana }) {
@@ -13,8 +13,8 @@ function Destaque({ dados, semana }) {
     const diaHoje = new Date().toLocaleDateString();
 
     return (
-        <section className="tela">
-            <div className="emCima">
+        <section className={styles.tela}>
+            <div className={styles.emCima}>
                 <h2>{diaDaSemana}</h2>
                 <p>{diaHoje}</p>
                 {
@@ -27,7 +27,7 @@ function Destaque({ dados, semana }) {
 
             {
                 !isNaN(temp) &&
-                <div className="emBaixo">
+                <div className={styles.emBaixo}>
                     <h1>{temp + "°C"}</h1>
                     <p>{ceu}</p>
                 </div>

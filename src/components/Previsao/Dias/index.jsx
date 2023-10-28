@@ -1,4 +1,4 @@
-import "./Dia.css";
+import styles from "./Dia.module.css";
 import { WiDayRainWind, WiDaySunny } from "react-icons/wi"; // sol | sol com chuva
 import { IoPartlySunnyOutline } from "react-icons/io5"; // sol com nuvens
 import { AiOutlineCloud } from "react-icons/ai"; // nuvem 
@@ -44,7 +44,7 @@ function Dia({ ativo = false, dados, semana }) {
     }
 
     return (
-        <li className="dia" style={estilo}>
+        <li className={styles.dia} style={estilo}>
             <p>
                 {semana[data]}
             </p>

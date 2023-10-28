@@ -1,4 +1,4 @@
-import "./Previsao.css";
+import styles from "./Previsao.module.css";
 import Dia from "./Dias";
 import InputBox from "./InputBox";
 import Detalhes from "./Detalhes";
@@ -94,17 +94,17 @@ function Previsao() {
     ];
 
     return (
-        <main className="previsaoClima">
+        <main className={styles.previsaoClima}>
             <Destaque dados={hoje} semana={semana} />
 
-            <section className="informacoes">
-                <div className="ar">
+            <section className={styles.informacoes}>
+                <div className={styles.ar}>
                     <Detalhes nome={"CHUVA"} dado={hoje.chuva || 0} />
                     <Detalhes nome={"UMIDADE"} dado={hoje.umidade} />
                     <Detalhes nome={"VENTO"} dado={hoje.vento} />
                 </div>
 
-                <ul className="semana">
+                <ul className={styles.semana}>
                     {
                         Object.keys(hoje).length !== 0 &&
                         <Dia
