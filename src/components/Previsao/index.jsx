@@ -24,7 +24,7 @@ function Previsao() {
 
     async function buscarDadosAPI(nomeDaCidade) {
         try {
-            const localizacao = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${nomeDaCidade}&appid=${apiWeatherKey}`)
+            const localizacao = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${nomeDaCidade}&appid=${apiWeatherKey}`)
                 .then(resp => resp.json())
                 .then(resp => resp[0])
                 .then((resp) => [resp.lat, resp.lon])
@@ -61,7 +61,7 @@ function Previsao() {
                 })
             setHoje(atualClima);
 
-            const previsaoClima = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${localizacao[0]}&lon=${localizacao[1]}&appid=${apiWeatherKey}&units=metric&lang=pt_br`)
+            const previsaoClima = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${localizacao[0]}&lon=${localizacao[1]}&appid=${apiWeatherKey}&units=metric&lang=pt_br`)
                 .then(resp => resp.json())
                 .then(resp => resp.list.filter((obj) => {
                     return obj.dt_txt.split("-").reverse()[0].slice(0, 2) > new Date().getDate()
