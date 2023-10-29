@@ -3,6 +3,7 @@ import Dia from "./Dias";
 import InputBox from "./InputBox";
 import Detalhes from "./Detalhes";
 import Destaque from "./Destaque";
+import swal from "sweetalert";
 import { useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
@@ -79,7 +80,7 @@ function Previsao() {
                 })
             SetPrevisao(previsaoClima);
         } catch (error) {
-            return window.alert("Ocorreu um erro: \n Cidade não encontrada. Verifique o nome da cidade e tente novamente.");
+            return swal("Cidade não encontrada", "Verifique o nome da cidade e tente novamente");
         }
     };
 
